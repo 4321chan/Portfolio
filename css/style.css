@@ -497,6 +497,7 @@ h1, h2, h3, h4, h5, h6 {
     gap: 3rem;
     max-width: 1200px;
     margin: 0 auto;
+    align-items: start;
 }
 
 .video-card {
@@ -507,9 +508,10 @@ h1, h2, h3, h4, h5, h6 {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid #e9ecef;
     width: 100%;
-    height: auto;
+    height: 100%;
     display: flex;
     flex-direction: column;
+    min-height: 600px;
 }
 
 .video-card:hover {
@@ -675,6 +677,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .video-content {
     padding: 2rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .video-title {
@@ -688,6 +694,8 @@ h1, h2, h3, h4, h5, h6 {
     color: #666;
     line-height: 1.6;
     margin-bottom: 1.5rem;
+    flex-grow: 1;
+    min-height: 4rem;
 }
 
 .video-tags {
