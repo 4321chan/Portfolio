@@ -497,7 +497,7 @@ h1, h2, h3, h4, h5, h6 {
     gap: 3rem;
     max-width: 1200px;
     margin: 0 auto;
-    align-items: start;
+    align-items: stretch;
 }
 
 .video-card {
@@ -508,10 +508,10 @@ h1, h2, h3, h4, h5, h6 {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid #e9ecef;
     width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    min-height: 600px;
+    display: grid;
+    grid-template-rows: 300px 1fr;
+    min-height: 550px;
+    max-height: 550px;
 }
 
 .video-card:hover {
@@ -523,8 +523,7 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     background: #000;
     width: 100%;
-    height: 0;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 300px;
     overflow: hidden;
     border-radius: 15px 15px 0 0;
     flex-shrink: 0;
@@ -677,10 +676,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .video-content {
     padding: 2rem;
-    flex-grow: 1;
     display: flex;
     flex-direction: column;
     height: 100%;
+    overflow: hidden;
 }
 
 .video-title {
@@ -1016,12 +1015,16 @@ h1, h2, h3, h4, h5, h6 {
     .videos-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
+        align-items: stretch;
     }
     
     .video-card {
         margin: 0 auto;
         max-width: 500px;
         width: 100%;
+        min-height: 500px;
+        max-height: 500px;
+        grid-template-rows: 280px 1fr;
     }
     
     .project-image {
@@ -1077,11 +1080,15 @@ h1, h2, h3, h4, h5, h6 {
     .videos-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
+        align-items: stretch;
     }
     
     .video-card {
         max-width: 100%;
         width: 100%;
+        min-height: 450px;
+        max-height: 450px;
+        grid-template-rows: 250px 1fr;
     }
     
     .video-content {
